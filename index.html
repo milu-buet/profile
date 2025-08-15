@@ -1,489 +1,373 @@
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <title>Md Lutfar Rahman</title>
-  <meta name="description" content="Md Lutfar Rahman — Software Development Engineer II at Amazon Web Services. Ph.D. in Computer Science. Cloud, distributed systems, data engineering, and research.">
-  <meta name="author" content="milu" />
+  <meta name="description" content="Md Lutfar Rahman — Software Development Engineer II at AWS. Ph.D. in Computer Science. Cloud, distributed systems, and data engineering." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Mobile -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- CSS via CDNs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="static/OnePage/css/default.css">
-  <link rel="stylesheet" href="static/OnePage/css/layout.css">
-  <link rel="stylesheet" href="static/OnePage/css/media-queries.css">
-  <link rel="stylesheet" href="static/OnePage/css/magnific-popup.css">
-  <!-- Font Awesome (for social icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- Scripts -->
-  <script src="static/OnePage/js/modernizr.js" defer></script>
-
-  <!-- Favicon -->
-  <link rel="icon" href="static/OnePage/others/favicon.ico">
+  <style>
+    :root {
+      --bg:#0f1115; --fg:#e7e9ee; --muted:#a9afbf; --accent:#4f8cff; --card:#171a21;
+    }
+    body { background:#fff; color:#222; line-height:1.6; }
+    header { background:var(--bg); color:var(--fg); padding:84px 0 48px; }
+    #nav-wrap { position:fixed; top:0; left:0; right:0; background:rgba(15,17,21,.95); z-index:1000; }
+    #nav-wrap .nav { list-style:none; margin:0; padding:10px 0; text-align:center; }
+    #nav-wrap .nav li { display:inline-block; margin:0 12px; }
+    #nav-wrap .nav a { color:#d7d9df; text-decoration:none; font-weight:600; }
+    #nav-wrap .nav a:hover { color:#fff; }
+    .banner { margin-top:64px; }
+    .banner-text { text-align:center; max-width:980px; margin:0 auto; }
+    .banner-text h1 { margin-bottom:8px; color:#fff; }
+    .banner-text h3 { color:#cfd3df; font-weight:400; }
+    .social { list-style:none; padding:0; margin-top:14px; }
+    .social li { display:inline-block; margin: 0 6px; }
+    .social a { color:#fff; font-size:20px; }
+    .scrolldown { text-align:center; margin-top:18px; }
+    section { padding:66px 0; }
+    .row { max-width:1100px; margin:0 auto; }
+    .three.columns { width:25%; float:left; padding:0 10px; box-sizing:border-box; }
+    .nine.columns { width:75%; float:left; padding:0 10px; box-sizing:border-box; }
+    .twelve.columns { width:100%; float:left; padding:0 10px; box-sizing:border-box; }
+    .header-col { width:25%; float:left; padding:0 10px; box-sizing:border-box; }
+    .main-col { width:75%; float:left; padding:0 10px; box-sizing:border-box; }
+    .cf::after, .row::after { content:""; display:block; clear:both; }
+    .profile-pic { max-width:100%; border-radius:10px; }
+    .info { color:#555; }
+    .pill { display:inline-block; padding:4px 10px; border:1px solid #ddd; border-radius:999px; margin:4px 6px 0 0; font-size:12px; }
+    .card { background:#fff; border:1px solid #eee; border-radius:12px; padding:18px; margin-bottom:16px; }
+    .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:16px; }
+    .col-6 { grid-column:span 6; }
+    .col-12 { grid-column:span 12; }
+    #portfolio .item-wrap { position:relative; overflow:hidden; border-radius:10px; background:var(--card); }
+    #portfolio .thumb { display:block; width:100%; height:180px; background:#222 center/cover no-repeat; }
+    #portfolio .overlay { position:absolute; inset:0; background:rgba(0,0,0,.55); color:#fff; opacity:0; transition:.2s; display:flex; align-items:center; justify-content:center; text-align:center; padding:10px; }
+    #portfolio .item-wrap:hover .overlay { opacity:1; }
+    .portfolio-item-meta h5 { margin:0 0 4px; }
+    footer { background:#0f1115; color:#aeb3c2; padding:28px 0; }
+    footer a { color:#e7e9ee; }
+    .badge { background: #eef3ff; color:#3156d0; border-radius:6px; padding:2px 8px; font-size:12px; margin-left:8px; }
+    @media (max-width: 768px) {
+      .three.columns, .nine.columns, .twelve.columns, .header-col, .main-col { width:100%; }
+      #nav-wrap .nav li { display:block; margin:6px 0; }
+      .grid { grid-template-columns:repeat(6,1fr); }
+      .col-6 { grid-column:span 6; }
+    }
+  </style>
 </head>
-
 <body>
 
   <!-- Header -->
   <header id="home" role="banner">
     <nav id="nav-wrap" aria-label="Primary">
-      <a class="mobile-btn" href="#nav" title="Show navigation">Show navigation</a>
-      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
       <ul id="nav" class="nav">
         <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
         <li><a class="smoothscroll" href="#about">About</a></li>
         <li><a class="smoothscroll" href="#resume">Resume</a></li>
-        <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-        <li><a class="smoothscroll" href="#testimonials">Quotes</a></li>
+        <li><a class="smoothscroll" href="#portfolio">Projects</a></li>
+        <li><a class="smoothscroll" href="#contact">Contact</a></li>
       </ul>
     </nav>
 
     <div class="row banner">
       <div class="banner-text">
-        <h1 class="responsive-headline">I'm Md Lutfar Rahman</h1>
+        <h1>I'm Md Lutfar Rahman</h1>
         <h3>
-          I'm a <span>Software Development Engineer II</span> at <span>Amazon Web Services</span>.
-          I hold a Ph.D. in <span>Computer Science</span> from the <span>University of Memphis</span>.
-          My interests include <span>Distributed Systems</span> and <span>Theoretical Computer Science</span>.
-          Let's <a class="smoothscroll" href="#about">start scrolling</a> and learn more
-          <a class="smoothscroll" href="#about">about me</a>.
+          <strong>Software Development Engineer II</strong> at <strong>Amazon Web Services</strong> <span class="badge">Jan 2022–Present</span>.<br/>
+          Ph.D. in Computer Science — University of Memphis. I build cloud-native, distributed systems and data platforms.
         </h3>
         <hr />
         <ul class="social" aria-label="Social links">
-          <li><a href="https://www.facebook.com/milu.buet" target="_blank" rel="noopener"><i class="fa fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
-          <li><a href="https://twitter.com/milu_buet" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
-          <li><a href="https://www.linkedin.com/in/milubuet" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a></li>
-          <li><a href="skype:" aria-label="Skype"><i class="fa fa-skype" aria-hidden="true"></i><span class="sr-only">Skype</span></a></li>
+          <li><a href="https://www.linkedin.com/in/milubuet" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/milu-buet" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+          <li><a href="https://scholar.google.com/citations?user=ewmp6mQAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a></li>
         </ul>
       </div>
     </div>
 
-    <p class="scrolldown">
-      <a class="smoothscroll" href="#about" aria-label="Scroll to about section"><i class="icon-down-circle" aria-hidden="true"></i></a>
+    <p class="scrolldown" style="text-align:center;color:#fff;">
+      <a class="smoothscroll" href="#about" aria-label="Scroll to about section"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
     </p>
   </header>
-  <!-- Header End -->
 
   <!-- About -->
   <section id="about">
     <div class="row">
       <div class="three columns">
-        <img class="profile-pic" src="static/OnePage/images/profilepic_milu.jpg" alt="Portrait of Md Lutfar Rahman" loading="lazy" />
+        <img class="profile-pic" src="https://picsum.photos/400/400?random=7" alt="Portrait of Md Lutfar Rahman" loading="lazy" />
       </div>
 
       <div class="nine columns main-col">
         <h2>About Me</h2>
         <p>
-          I received my B.Sc. in Computer Science and Engineering from Bangladesh University of Engineering and
-          Technology in 2013. After three and a half years in industry working primarily with Python and JavaScript,
-          I began my Ph.D. in Computer Science at the University of Memphis in 2016, focusing on computational
-          complexity and two-player games. I now build large-scale, cloud-native systems at Amazon Web Services.
+          AWS backend engineer with experience in real‑time customer data analytics and highly scalable distributed messaging platforms.
+          Previously at Meta (intern) on network capacity analysis; completed a Ph.D. focused on complexity of combinatorial games.
         </p>
 
         <div class="row">
           <div class="columns contact-details">
-            <h2>Contact Details</h2>
-            <address class="address">
-              <span>Md Lutfar Rahman</span><br />
-              <span>Seattle, WA, USA</span><br />
-              <span>(+1) 901-273-4019</span><br />
-              <span><a href="mailto:lutfar@amazon.com">lutfar@amazon.com</a></span>
-            </address>
+            <h2>Quick Facts</h2>
+            <div class="card">
+              <div><strong>Current:</strong> SDE II, Amazon Web Services</div>
+              <div><strong>Ph.D.:</strong> Computer Science, University of Memphis (Dec 2021)</div>
+              <div><strong>B.Sc.:</strong> CSE, Bangladesh University of Engineering & Technology (2013)</div>
+            </div>
           </div>
 
           <div class="columns download">
             <p>
-              <!-- Keep your existing path if you host the PDF there -->
-              <a href="static/OnePage/pdf/Lutfar_CV.pdf" class="button"><i class="fa fa-download"></i> Download Resume</a>
+              <a href="#" class="button"><i class="fa fa-download"></i> Download Resume</a>
             </p>
           </div>
-        </div> <!-- end row -->
-      </div> <!-- end .main-col -->
+        </div>
+      </div>
     </div>
   </section>
-  <!-- About End -->
 
   <!-- Resume -->
   <section id="resume">
-    <!-- Education -->
-    <div class="row education">
-      <div class="three columns header-col"><h1><span>Education</span></h1></div>
-      <div class="nine columns main-col">
-        <div class="row item">
-          <div class="twelve columns">
-            <h3><a href="https://www.memphis.edu/" target="_blank" rel="noopener">The University of Memphis</a></h3>
-            <p class="info">Ph.D., Computer Science <span>&bull;</span> <em class="date">December 2021</em></p>
-          </div>
-        </div>
-
-        <div class="row item">
-          <div class="twelve columns">
-            <h3><a href="https://www.buet.ac.bd/" target="_blank" rel="noopener">Bangladesh University of Engineering and Technology</a></h3>
-            <p class="info">B.Sc., Computer Science and Engineering <span>&bull;</span> <em class="date">February 2013</em></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Education -->
-
-    <!-- Research -->
-    <div id="research" class="row work">
-      <div class="three columns header-col"><h1><span>Research</span></h1></div>
-      <div class="nine columns main-col">
-        <div class="row item">
-          <div class="twelve columns">
-            <h3><a href="#" aria-label="Publication: Secure Live Virtual Machine Migration through Runtime Monitors.">Secure Live Virtual Machine Migration through Runtime Monitors</a></h3>
-            <p class="info">Journal of Computer Science Applications and Information Technology <span>&bull;</span> <em class="date">August 2017</em></p>
-          </div>
-        </div>
-
-        <div class="row item">
-          <div class="twelve columns">
-            <h3><a href="https://cse.buet.ac.bd/research/group/gd/index.php?pageid=SurveillanceSystemDhaka" target="_blank" rel="noopener">Design of a Surveillance System for Dhaka City</a></h3>
-            <p class="info">Undergraduate thesis (Graph Theory &amp; Routing) <span>&bull;</span> <em class="date">February 2013</em></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Research -->
-
-    <!-- Work -->
     <div class="row work">
-      <div class="three columns header-col"><h1><span>Work</span></h1></div>
+      <div class="three columns header-col"><h1><span>Experience</span></h1></div>
       <div class="nine columns main-col">
-        <div class="row item">
-          <div class="twelve columns">
-            <h3><a href="https://aws.amazon.com/" target="_blank" rel="noopener">Amazon Web Services</a></h3>
-            <p class="info">Software Development Engineer II <span>&bull;</span> <em class="date">Jan 2022 – Present</em></p>
-            <p>Building large-scale, distributed, cloud-native services and analytics platforms.</p>
-          </div>
+        <div class="card">
+          <h3>Amazon Web Services (AWS) — <em>Software Development Engineer II</em></h3>
+          <p class="info">Jan 2022 – Present</p>
+          <ul>
+            <li>Developed highly scalable distributed messaging platform for complex campaigns.</li>
+            <li>Introduced dual‑stack (IPv6) domains for AWS Customer Profiles.</li>
+            <li>Built Generative‑AI ticket summarizer to help operations teams.</li>
+            <li>Ran Pinpoint capacity analysis across EC2, ECS, Glue, Lambda, and Kinesis.</li>
+            <li>Implemented data quality monitoring (AWS Glue, Deequ) for event data.</li>
+          </ul>
         </div>
-
-        <div class="row item">
-          <div class="twelve columns">
-            <h3><a href="https://www.memphis.edu/" target="_blank" rel="noopener">The University of Memphis</a></h3>
-            <p class="info">Graduate Research Assistant <span>&bull;</span> <em class="date">Jun 2017 – Dec 2021</em></p>
-            <p>Research on two-player games and complexity classes (NP/PSPACE).</p>
-          </div>
+        <div class="card">
+          <h3>Meta — <em>Software Engineer Intern</em></h3>
+          <p class="info">Jun 2021 – Aug 2021</p>
+          <ul>
+            <li>Compared simulated vs. empirical network capacity/usage using statistical tests.</li>
+          </ul>
         </div>
-
-        <div class="row item">
-          <div class="twelve columns">
-            <h3><a href="https://zssbd.com/" target="_blank" rel="noopener">ZS Solutions Ltd.</a></h3>
-            <p class="info">Senior Software Engineer <span>&bull;</span> <em class="date">May 2014 – Jul 2016</em></p>
-            <p>Led full-stack web services (Python, Tornado, Celery, RabbitMQ) and messaging platforms.</p>
-          </div>
+        <div class="card">
+          <h3>University of Memphis — <em>Graduate Assistant</em></h3>
+          <p class="info">Aug 2016 – Dec 2021</p>
+          <ul>
+            <li>Published PSPACE‑completeness results on Maker‑Breaker games.</li>
+            <li>Published deep learning papers on COVID‑19 symptom detection; work on VM migration in cloud.</li>
+          </ul>
         </div>
-
-        <div class="row item">
-          <div class="twelve columns">
-            <h3><a href="http://www.commlinkinfotech.com/" target="_blank" rel="noopener">Commlink Info Tech Ltd.</a></h3>
-            <p class="info">Software Engineer (R&amp;D) <span>&bull;</span> <em class="date">Feb 2013 – May 2014</em></p>
-            <p>Networking &amp; telecom software R&amp;D.</p>
-          </div>
+        <div class="card">
+          <h3>ZS Solutions Ltd. — <em>Senior Software Engineer</em></h3>
+          <p class="info">May 2014 – Jul 2016</p>
+          <ul>
+            <li>Full‑stack engineer for healthcare management web service and non‑blocking bulk messaging service.</li>
+          </ul>
         </div>
-      </div>
-    </div>
-    <!-- End Work -->
-
-    <!-- Industry Skills -->
-    <div class="row skill">
-      <div class="three columns header-col"><h1><span>Industry Skills</span></h1></div>
-      <div class="nine columns main-col">
-        <p>I started with C and C++, and expanded into backend, cloud, and data engineering.</p>
-        <div class="bars" role="list">
-          <ul class="skills">
-            <li><span class="bar-expand cp"></span><em>C/C++</em></li>
-            <li><span class="bar-expand java"></span><em>Java</em></li>
-            <li><span class="bar-expand sql"></span><em>SQL</em></li>
-            <li><span class="bar-expand python"></span><em>Python</em></li>
-            <li><span class="bar-expand django"></span><em>Django</em></li>
-            <li><span class="bar-expand tornado"></span><em>Tornado</em></li>
-            <li><span class="bar-expand html5"></span><em>HTML5</em></li>
-            <li><span class="bar-expand css"></span><em>CSS</em></li>
-            <li><span class="bar-expand bootstrap"></span><em>Bootstrap</em></li>
-            <li><span class="bar-expand javascript"></span><em>JavaScript</em></li>
-            <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
+        <div class="card">
+          <h3>Commlink Info Tech Ltd. — <em>Software Engineer</em></h3>
+          <p class="info">Feb 2013 – Apr 2014</p>
+          <ul>
+            <li>R&amp;D on network management software for Bangla‑Phone’s network in Bangladesh.</li>
           </ul>
         </div>
       </div>
     </div>
-    <!-- End Skills -->
-  </section>
-  <!-- Resume End -->
 
-  <!-- Portfolio -->
+    <div class="row education">
+      <div class="three columns header-col"><h1><span>Education</span></h1></div>
+      <div class="nine columns main-col">
+        <div class="card">
+          <h3>University of Memphis — Ph.D., Computer Science</h3>
+          <p class="info">Dec 2021</p>
+          <p>Dissertation: <em>Unordered CNF Game</em></p>
+        </div>
+        <div class="card">
+          <h3>Bangladesh University of Engineering & Technology — B.Sc., CSE</h3>
+          <p class="info">2013</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row skill">
+      <div class="three columns header-col"><h1><span>Skills</span></h1></div>
+      <div class="nine columns main-col">
+        <div class="card">
+          <div><strong>Programming:</strong> Python, Java, Scala, Kotlin, C, C++, SQL</div>
+          <div><strong>Cloud:</strong> AWS (EC2, ECS, EMR, Glue, Lambda, Kinesis, Deequ), Docker, OpenStack</div>
+          <div><strong>Big Data:</strong> Apache Spark, Hadoop</div>
+          <div><strong>Databases:</strong> MySQL, PostgreSQL, DynamoDB</div>
+          <div><strong>Research:</strong> ML/GenAI, Complexity of Games</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (from Resume only) -->
   <section id="portfolio">
     <div class="row">
       <div class="twelve columns collapsed">
-        <h1>Check Out Some of My Works.</h1>
+        <h1>Selected Projects</h1>
 
-        <!-- portfolio-wrapper -->
-        <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-          <div class="columns portfolio-item">
+        <div class="grid">
+          <!-- IPv6 Dual-Stack Domains -->
+          <div class="col-6">
             <div class="item-wrap">
-              <a href="#modal-01" title="Open Bible Shake">
-                <img alt="Bible Shake app" loading="lazy"
-                     src="https://lh6.ggpht.com/ytbzPEeouGRseP4oQECtNbIgaPqkWL7VgM-HASgXlgfuNpdRfbXS5bpcD6xOm6dcdw=w300-rw">
-                <div class="overlay">
-                  <div class="portfolio-item-meta">
-                    <h5>Bible Shake</h5>
-                    <p>Android App</p>
-                  </div>
-                </div>
-                <div class="link-icon"><i class="icon-plus" aria-hidden="true"></i></div>
+              <a href="#proj-01" title="IPv6 Dual-Stack Domains">
+                <div class="thumb" style="background-image:url('https://picsum.photos/640/360?random=21');"></div>
+                <div class="overlay"><div class="portfolio-item-meta"><h5>IPv6 Dual‑Stack Domains</h5><p>AWS Customer Profiles</p></div></div>
               </a>
             </div>
           </div>
 
-          <div class="columns portfolio-item">
+          <!-- Generative AI Ticket Summarizer -->
+          <div class="col-6">
             <div class="item-wrap">
-              <a href="#modal-02" title="Open SmartMed">
-                <img alt="SmartMed web app" loading="lazy" src="static/OnePage/others/smartmed2.jpg">
-                <div class="overlay">
-                  <div class="portfolio-item-meta">
-                    <h5>SmartMed</h5>
-                    <p>Doctor’s patient management</p>
-                  </div>
-                </div>
-                <div class="link-icon"><i class="icon-plus" aria-hidden="true"></i></div>
+              <a href="#proj-02" title="Generative AI Ticket Summarizer">
+                <div class="thumb" style="background-image:url('https://picsum.photos/640/360?random=22');"></div>
+                <div class="overlay"><div class="portfolio-item-meta"><h5>GenAI Ticket Summarizer</h5><p>Operational tooling</p></div></div>
               </a>
             </div>
           </div>
 
-          <div class="columns portfolio-item">
+          <!-- Native AWS Migration (NAWS) -->
+          <div class="col-6">
             <div class="item-wrap">
-              <a href="#modal-03" title="Open Air Fighter">
-                <img alt="Air Fighter game" loading="lazy" src="static/OnePage/others/Fighterplan4.bmp">
-                <div class="overlay">
-                  <div class="portfolio-item-meta">
-                    <h5>Air Fighter</h5>
-                    <p>Windows Game</p>
-                  </div>
-                </div>
-                <div class="link-icon"><i class="icon-plus" aria-hidden="true"></i></div>
+              <a href="#proj-03" title="Native AWS Migration">
+                <div class="thumb" style="background-image:url('https://picsum.photos/640/360?random=23');"></div>
+                <div class="overlay"><div class="portfolio-item-meta"><h5>Native AWS Migration</h5><p>Backend infra (Java, Coral)</p></div></div>
               </a>
             </div>
           </div>
 
-          <div class="columns portfolio-item">
+          <!-- Pinpoint Capacity Analysis -->
+          <div class="col-6">
             <div class="item-wrap">
-              <a href="#modal-04" title="Open Doradory">
-                <img alt="Doradory.com screenshot" loading="lazy" src="static/OnePage/others/Doradory.png">
-                <div class="overlay">
-                  <div class="portfolio-item-meta">
-                    <h5>Doradory.com</h5>
-                    <p>Auction e-commerce</p>
-                  </div>
-                </div>
-                <div class="link-icon"><i class="icon-plus" aria-hidden="true"></i></div>
+              <a href="#proj-04" title="Pinpoint Capacity Analysis">
+                <div class="thumb" style="background-image:url('https://picsum.photos/640/360?random=24');"></div>
+                <div class="overlay"><div class="portfolio-item-meta"><h5>Pinpoint Capacity Analysis</h5><p>EC2 · ECS · Glue · Lambda · Kinesis</p></div></div>
               </a>
             </div>
           </div>
 
-          <div class="columns portfolio-item">
+          <!-- Data Quality Management -->
+          <div class="col-6">
             <div class="item-wrap">
-              <a href="#modal-05" title="Open Smartmessage">
-                <img alt="Smartmessage platform UI" loading="lazy" src="static/OnePage/images/portfolio/smartmessage.png">
-                <div class="overlay">
-                  <div class="portfolio-item-meta">
-                    <h5>Smartmessage Platform</h5>
-                    <p>Bulk SMS &amp; Email</p>
-                  </div>
-                </div>
-                <div class="link-icon"><i class="icon-plus" aria-hidden="true"></i></div>
-              </a>
-            </div>
-          </div>
-
-          <div class="columns portfolio-item">
-            <div class="item-wrap">
-              <a href="#modal-06" title="Open Surveillance System">
-                <img alt="Surveillance System map" loading="lazy" src="static/OnePage/images/portfolio/su.png">
-                <div class="overlay">
-                  <div class="portfolio-item-meta">
-                    <h5>Surveillance System</h5>
-                    <p>Dhaka City map</p>
-                  </div>
-                </div>
-                <div class="link-icon"><i class="icon-plus" aria-hidden="true"></i></div>
+              <a href="#proj-05" title="Data Quality Management">
+                <div class="thumb" style="background-image:url('https://picsum.photos/640/360?random=25');"></div>
+                <div class="overlay"><div class="portfolio-item-meta"><h5>Data Quality Management</h5><p>AWS Glue &amp; Deequ</p></div></div>
               </a>
             </div>
           </div>
         </div>
-        <!-- portfolio-wrapper end -->
       </div>
 
-      <!-- Modals -->
-      <div id="modal-01" class="popup-modal mfp-hide" role="dialog" aria-modal="true" aria-labelledby="modal-01-title">
-        <img class="scale-with-grid" src="https://lh6.ggpht.com/ytbzPEeouGRseP4oQECtNbIgaPqkWL7VgM-HASgXlgfuNpdRfbXS5bpcD6xOm6dcdw=w300-rw" alt="Bible Shake app screenshot" loading="lazy" />
+      <!-- Project Modals -->
+      <div id="proj-01" class="mfp-hide white-popup">
         <div class="description-box">
-          <h4 id="modal-01-title">Bible Shake</h4>
-          <p>Bible Shake generates random scriptures and provides a unique way to navigate the Bible …</p>
-          <span class="categories"><i class="fa fa-tag"></i> Android App</span>
+          <h4>IPv6 Dual‑Stack Domains — AWS Customer Profiles</h4>
+          <p>Introduced new dual‑stack domains (IPv4/IPv6) for AWS Customer Profiles to enable future‑proof networking and global reach.</p>
+          <p><strong>Tech:</strong> AWS networking, DNS, load balancing</p>
         </div>
-        <div class="link-box">
-          <a href="https://play.google.com/store/apps/details?id=com.appit.bibleshake.free&hl=en" target="_blank" rel="noopener">Details</a>
-          <a class="popup-modal-dismiss">Close</a>
-        </div>
+        <div class="link-box"><a class="popup-modal-dismiss" href="#">Close</a></div>
       </div>
 
-      <div id="modal-02" class="popup-modal mfp-hide" role="dialog" aria-modal="true" aria-labelledby="modal-02-title">
-        <img class="scale-with-grid" src="static/OnePage/others/smartmed.jpg" alt="SmartMed screenshot" loading="lazy" />
+      <div id="proj-02" class="mfp-hide white-popup">
         <div class="description-box">
-          <h4 id="modal-02-title">SmartMed</h4>
-          <p>SmartMed Telehealth enables remote monitoring of patient vital signs and wellbeing …</p>
-          <span class="categories"><i class="fa fa-tag"></i> Web Development</span>
+          <h4>Generative AI Ticket Summarizer</h4>
+          <p>Internal tool to summarize support/ops tickets and surface key actions for faster triage.</p>
+          <p><strong>Tech:</strong> AWS, Python, GenAI</p>
         </div>
-        <div class="link-box">
-          <a href="http://smartmedbd.com/" target="_blank" rel="noopener">Details</a>
-          <a class="popup-modal-dismiss">Close</a>
-        </div>
+        <div class="link-box"><a class="popup-modal-dismiss" href="#">Close</a></div>
       </div>
 
-      <div id="modal-03" class="popup-modal mfp-hide" role="dialog" aria-modal="true" aria-labelledby="modal-03-title">
-        <img class="scale-with-grid" src="static/OnePage/others/Fighterplan4.bmp" alt="Air Fighter screenshot" loading="lazy" />
+      <div id="proj-03" class="mfp-hide white-popup">
         <div class="description-box">
-          <h4 id="modal-03-title">Air Fighter</h4>
-          <p>Windows game written in C++ and OpenGL (term project).</p>
-          <span class="categories"><i class="fa fa-tag"></i> Term Project</span>
+          <h4>Native AWS Migration (NAWS)</h4>
+          <p>Designed backend infrastructure to run services natively in Amazon’s internal AWS environment.</p>
+          <p><strong>Tech:</strong> Java, Coral, AWS</p>
         </div>
-        <div class="link-box">
-          <a href="static/OnePage/others/AirFighter.zip">Download</a>
-          <a class="popup-modal-dismiss">Close</a>
-        </div>
+        <div class="link-box"><a class="popup-modal-dismiss" href="#">Close</a></div>
       </div>
 
-      <div id="modal-04" class="popup-modal mfp-hide" role="dialog" aria-modal="true" aria-labelledby="modal-04-title">
-        <img class="scale-with-grid" src="static/OnePage/others/Doradory.png" alt="Doradory.com screenshot" loading="lazy" />
+      <div id="proj-04" class="mfp-hide white-popup">
         <div class="description-box">
-          <h4 id="modal-04-title">Doradory.com</h4>
-          <p>The first auction site in Bangladesh.</p>
-          <span class="categories"><i class="fa fa-tag"></i> Web Development</span>
+          <h4>AWS Pinpoint Capacity Analysis</h4>
+          <p>Load tests and scaling analysis across multiple AWS services to understand limits and propose tuning.</p>
+          <p><strong>Tech:</strong> EC2, ECS, Glue, Lambda, Kinesis</p>
         </div>
-        <div class="link-box">
-          <a href="http://www.doradory.com/" target="_blank" rel="noopener">Details</a>
-          <a class="popup-modal-dismiss">Close</a>
-        </div>
+        <div class="link-box"><a class="popup-modal-dismiss" href="#">Close</a></div>
       </div>
 
-      <div id="modal-05" class="popup-modal mfp-hide" role="dialog" aria-modal="true" aria-labelledby="modal-05-title">
-        <img class="scale-with-grid" src="static/OnePage/images/portfolio/smartmessage.png" alt="Smartmessage screenshot" loading="lazy" />
+      <div id="proj-05" class="mfp-hide white-popup">
         <div class="description-box">
-          <h4 id="modal-05-title">Smartmessage Platform</h4>
-          <p>Two-way messaging with short code/VMN, inbox, email forwarding, and REST API integration.</p>
-          <span class="categories"><i class="fa fa-tag"></i> Bulk SMS, Email</span>
+          <h4>Data Quality Management System</h4>
+          <p>Monitors event data quality and alerts on skewed/anomalous data patterns.</p>
+          <p><strong>Tech:</strong> AWS Glue, Deequ</p>
         </div>
-        <div class="link-box">
-          <a href="http://smartmessage.me/" target="_blank" rel="noopener">Details</a>
-          <a class="popup-modal-dismiss">Close</a>
-        </div>
+        <div class="link-box"><a class="popup-modal-dismiss" href="#">Close</a></div>
       </div>
-
-      <div id="modal-06" class="popup-modal mfp-hide" role="dialog" aria-modal="true" aria-labelledby="modal-06-title">
-        <img class="scale-with-grid" src="static/OnePage/images/portfolio/su.png" alt="Surveillance System map" loading="lazy" />
-        <div class="description-box">
-          <h4 id="modal-06-title">Surveillance System</h4>
-          <p>Applied Dijkstra’s Algorithm and alternative routing on Dhaka City map data (OpenStreetMap), with performance strategies on large datasets.</p>
-          <span class="categories"><i class="fa fa-tag"></i> Dijkstra Algorithm</span>
-        </div>
-        <div class="link-box">
-          <a href="https://cse.buet.ac.bd/research/group/gd/index.php?pageid=SurveillanceSystemDhaka" target="_blank" rel="noopener">Details</a>
-          <a class="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-      <!-- Modals End -->
+      <!-- End Project Modals -->
     </div>
   </section>
-  <!-- Portfolio End -->
 
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <div class="text-container">
-      <div class="row">
-        <div class="two columns header-col">
-          <h1><span>Quotes</span></h1>
+  <!-- Contact -->
+  <section id="contact">
+    <div class="row">
+      <div class="three columns header-col"><h1><span>Contact</span></h1></div>
+      <div class="nine columns main-col">
+        <div class="card">
+          <p><strong>Location:</strong> Seattle, WA, USA</p>
+          <p><strong>Email:</strong> <a href="mailto:lutfar@amazon.com">lutfar@amazon.com</a></p>
+          <p><strong>Phone:</strong> (+1) 901‑273‑4019</p>
         </div>
-        <div class="ten columns flex-container">
-          <div class="flexslider" aria-label="Quotes slider">
-            <ul class="slides">
-              <li>
-                <blockquote>
-                  <p>Software is a great combination between artistry and engineering.</p>
-                  <cite>Bill Gates</cite>
-                </blockquote>
-              </li>
-              <li>
-                <blockquote>
-                  <p>Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</p>
-                  <cite>Bill Gates</cite>
-                </blockquote>
-              </li>
-              <li>
-                <blockquote>
-                  <p>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</p>
-                  <cite>Martin Fowler</cite>
-                </blockquote>
-              </li>
-              <li>
-                <blockquote>
-                  <p>If you think you're the smartest person in the room, it simply means you're in the wrong room!</p>
-                  <cite>Unknown</cite>
-                </blockquote>
-              </li>
-              <li>
-                <blockquote>
-                  <p>When you begin to understand, you learn to be humble!</p>
-                  <cite>Unknown</cite>
-                </blockquote>
-              </li>
-            </ul>
-          </div><!-- .flexslider -->
-        </div><!-- .flex-container -->
-      </div><!-- .row -->
-    </div><!-- .text-container -->
+      </div>
+    </div>
   </section>
-  <!-- Testimonials End -->
 
   <!-- Footer -->
   <footer role="contentinfo">
     <div class="row">
       <div class="twelve columns">
         <ul class="social-links" aria-label="Social links">
-          <li><a href="https://www.facebook.com/milu.buet" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://twitter.com/milu_buet" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
           <li><a href="https://www.linkedin.com/in/milubuet" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="skype:"><i class="fa fa-skype"></i></a></li>
+          <li><a href="https://github.com/milu-buet" target="_blank" rel="noopener"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://scholar.google.com/citations?user=ewmp6mQAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa fa-graduation-cap"></i></a></li>
         </ul>
-
         <ul class="copyright">
           <li>&copy; <span id="year"></span> MILU</li>
           <li>Design by <a title="milu.buet" href="#">milu.buet</a></li>
         </ul>
       </div>
-
-      <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home" aria-label="Back to top"><i class="icon-up-open" aria-hidden="true"></i></a></div>
+      <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home" aria-label="Back to top"><i class="fa fa-angle-up" aria-hidden="true"></i></a></div>
     </div>
   </footer>
-  <!-- Footer End -->
 
-  <!-- JS (placed at end for performance) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" defer></script>
-  <script>window.jQuery || document.write('<script src="static/OnePage/js/jquery-1.10.2.min.js"><\/script>')</script>
-  <script src="static/OnePage/js/jquery-migrate-1.2.1.min.js" defer></script>
-  <script src="static/OnePage/js/jquery.flexslider.js" defer></script>
-  <script src="static/OnePage/js/waypoints.js" defer></script>
-  <script src="static/OnePage/js/jquery.fittext.js" defer></script>
-  <script src="static/OnePage/js/magnific-popup.js" defer></script>
-  <script src="static/OnePage/js/init.js" defer></script>
+  <!-- JS via CDNs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   <script>
-    // Update year automatically
-    (function(){document.getElementById('year').textContent = new Date().getFullYear();})();
+    // Smooth scroll
+    $(document).on('click', 'a.smoothscroll', function(e){
+      const href = $(this).attr('href');
+      if(href && href.startsWith('#')){
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $(href).offset().top - 60 }, 500);
+      }
+    });
+    // Modals
+    $(function(){
+      $('a[href^="#proj-"]').magnificPopup({ type:'inline', midClick:true, removalDelay:200, closeBtnInside:true });
+      $('#year').text(new Date().getFullYear());
+    });
   </script>
 </body>
 </html>
